@@ -1,14 +1,21 @@
-
 // Represents a customer in the system
 class Customer {
     String name;
-    String type; // "Regular", "Premium", "VIP"
+    String type;
+    double discount;
 
-
-    public Customer(String name, String type) {
+    public Customer(String name, String type, double discount) {
         this.name = name;
         this.type = type;
+        this.discount = discount;
+    }
 
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 
     public String getName() {

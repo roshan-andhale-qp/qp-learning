@@ -29,22 +29,11 @@ class Order {
     }
 
     public void applyDiscount() {
-        discountedPrice = totalPrice - (totalPrice * getDiscount());
-    }
-
-    private double getDiscount() {
-        if (customer.getType().equals("Regular")) {
-           return 0.05;
-        } else if (customer.getType().equals("Premium")) {
-            return  0.1;
-        } else if (customer.getType().equals("VIP")) {
-            return  0.2;
-        }
-        return 0;
+        discountedPrice = totalPrice - (totalPrice * customer.getDiscount());
     }
 
     public void printOrder() {
-        System.out.println("Customer: " + customer.name);
+        System.out.println("Customer: " + customer.getName());
         System.out.println("Items: " + items);
         System.out.println("Total Price: " + totalPrice);
         System.out.println("Discounted Price: " + discountedPrice);

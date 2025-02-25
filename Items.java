@@ -1,7 +1,7 @@
 public enum Items {
-    Laptop("Laptop", 1000),
-    Mouse("Mouse", 50),
-    Keyboard("KeyBoard", 80);
+    LAPTOP("Laptop", 1000),
+    MOUSE("Mouse", 50),
+    KEYBOARD("KeyBoard", 80);
 
     Items(String name, long price) {
         this.name = name;

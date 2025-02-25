@@ -1,13 +1,11 @@
-
-
 class OrderManagementSystem {
     public static void main(String[] args) {
-        Customer customer = new Customer("John Doe", "VIP");
+        Customer customer = new Customer("John Doe", CustomerType.VIP.getName(), CustomerType.VIP.getDiscount());
         Order order = new Order(customer);
 
-        order.addItem(Items.Laptop.getName(), Items.Laptop.getPrice());
-        order.addItem(Items.Mouse.getName(), Items.Mouse.getPrice());
-        order.addItem(Items.Keyboard.getName(), Items.Keyboard.getPrice());
+        order.addItem(Items.LAPTOP.getName(), Items.LAPTOP.getPrice());
+        order.addItem(Items.MOUSE.getName(), Items.MOUSE.getPrice());
+        order.addItem(Items.KEYBOARD.getName(), Items.KEYBOARD.getPrice());
 
         order.printOrder();
 
