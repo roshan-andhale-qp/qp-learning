@@ -1,25 +1,15 @@
-public enum CustomerType {
-    REGULAR("Regular", 0.05),
-    PREMIUM("Premium", 0.1),
-    VIP("VIP", 0.2);
+enum CustomerType {
+    REGULAR(0.05),
+    PREMIUM(0.10),
+    VIP(0.20);
 
-    CustomerType(String name, double discount) {
-        this.name = name;
+    private final double discount;
+
+    CustomerType(double discount) {
         this.discount = discount;
-    }
-
-    private String name;
-    private double discount;
-
-
-    public String getName() {
-        return name;
-
     }
 
     public double getDiscount() {
         return discount;
-
     }
-
 }
